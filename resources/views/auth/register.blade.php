@@ -61,6 +61,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="user_name" class="col-md-4 col-form-label text-md-right">ユーザーネーム</label>
+
+                            <div class="col-md-6">
+                                <input id="text" type="user_name" class="form-control" name="user_name" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="image" class="col-md-4 col-form-label text-md-right">アイコン画像</label>
+
+                            <div class="col-md-6">
+                                <input type="file" class="form-control-file" name="image">
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
