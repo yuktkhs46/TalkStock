@@ -8,7 +8,8 @@
       @foreach($posts as $post)
       <div class="col-md-4 d-flex">
       <div class="card  mb-4 shadow-sm d-inline-flex" style="width: 20rem;">
-        <h5 class="card-header">{{ $post->title}}</h5>
+      <a href="{{ route('post.show', $post->id)}}"　style="text-decoration: none; color:#000;">
+      <h5 class="card-header">{{ $post->title}}</h5>
         <div class="card-body">
           <h6 class="card-title">カテゴリー</h6>
           <h6 class="card-title">#tag</h6>
@@ -22,6 +23,7 @@
                 </div>                
               </div>
         </div>
+      </a>
       </div>
       </div> 
       @endforeach 
