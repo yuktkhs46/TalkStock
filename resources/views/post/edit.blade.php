@@ -7,7 +7,7 @@
 <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2 class="text-left">新規投稿</h2>
+                <h2 class="text-left">編集画面</h2>
                 <form  method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
