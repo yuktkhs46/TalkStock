@@ -16,7 +16,7 @@
         <div class="card-body row d-flex justify-content-between">
             <p col="col-8">＃タグ</p>
             <div class="col-4 operation d-flex justify-content-end">
-                <a href="" class="pr-3"><i class="fas fa-edit"></i></a>
+                <a href="{{ route('post.edit', [$post->id])}}" class="pr-3"><i class="fas fa-edit"></i></a>
                 <a href=""><i class="fas fa-trash-alt"></i></a>
             </div>
         </div>

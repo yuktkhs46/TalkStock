@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@extends('layouts.app')
-
-@section('content')
 <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
@@ -19,7 +16,7 @@
                     <form>
                         <div class="form-group">
                             <label class="control-label">タイトル</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text"　value="{{ $post->title }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label">カテゴリー</label>
@@ -33,19 +30,19 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label">それはいつの話？</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" value="{{ $post->time }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label">どこで？（場所）</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" value="{{ $post->place }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label">どんな内容？（起承転・フリ・情報...etc）</label>
-                            <textarea class="form-control" name="comment" rows="15"></textarea>
+                            <textarea class="form-control" name="comment" rows="15">{{ $post->content }}</textarea>
                         </div>
                         <div class="form-group">
                             <label class="control-label">最終的言いたいこと（結末・オチ・感じたこと...etc）</label>
-                            <textarea class="form-control" name="comment" rows="5"></textarea>
+                            <textarea class="form-control" name="comment" rows="5" >{{ $post->punchline }}</textarea>
                         </div>
                         <div class="form-group">
                             <label class="control-label">このメモを公開しますか？（とっておきのエピソードをみんなに教えてあげよう！）</label>
@@ -60,12 +57,10 @@
                     </form>
                     {{ csrf_field() }}
                     
-                    
-                
                 </form>
             </div>
         </div>
     </div>
 @endsection
 
-@endsection
+
