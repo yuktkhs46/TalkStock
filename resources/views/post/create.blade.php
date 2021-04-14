@@ -22,11 +22,9 @@
                         <div class="form-group">
                             <label class="control-label">カテゴリー</label>
                             <select class="form-control" name="category_id">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">

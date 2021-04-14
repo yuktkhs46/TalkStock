@@ -3,8 +3,11 @@
 @section('content')
 <div class="container">
     <div class="card">
-        <div class="card-header">
+        <div class="card-header d-flex justify-content-between">
             <h1>title</h1>
+            <div class="card-header-r text-right">
+                <p class="text-muted">{{ $post->category->name }}</p>
+            </div>
         </div>
         <div class="card-body">
             <p class="text-muted">それはいつのはなし？</p>
