@@ -88,13 +88,17 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($request);
         $post = Post::find($request->id);
         $post_form = $request->all();
-
+        
         unset($post_form['_token']);
+        unset($post_form['remove']);
         $post->fill($post_form)->save();
 
+        $posts = Post::all();
 
+        return redirect('/post');
     }
 
     /**

@@ -10,7 +10,7 @@
             <p>{{ $post->created_at }}</p>
         </div>
         <div class="card-body row d-flex justify-content-between">
-            <p class="col-4">カテゴリー</p>
+            <p class="col-4">{{ $post->category->name }}</p>
             <p class="col-2">❤️</p>
         </div>
         <div class="card-body row d-flex justify-content-between">
