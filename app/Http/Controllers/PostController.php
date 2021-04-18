@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -74,7 +75,8 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('post.edit', ['post' => $post]);
+        $categories = Category::all();
+        return view('post.edit', ['post' => $post, 'categories' => $categories]);
     }
 
     /**
@@ -86,7 +88,13 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($request->id);
+        $post_form = $request->all();
+
+        unset($post_form['_token']);
+        $post->fill($post_form)->save();
+
+
     }
 
     /**

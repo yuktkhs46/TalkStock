@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2 class="text-left">編集画面</h2>
-                <form  method="post" enctype="multipart/form-data">
+                <form method="POST" action="#" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
@@ -16,16 +16,14 @@
                     <form>
                         <div class="form-group">
                             <label class="control-label">タイトル</label>
-                            <input class="form-control" type="text"　value="{{ $post->title }}">
+                            <input class="form-control" type="text" value="{{ $post->title }}">
                         </div>
                         <div class="form-group">
                             <label class="control-label">カテゴリー</label>
                             <select class="form-control">
-                                <option>選択肢1</option>
-                                <option>選択肢2</option>
-                                <option>選択肢3</option>
-                                <option>選択肢4</option>
-                                <option>選択肢5</option>
+                                @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
