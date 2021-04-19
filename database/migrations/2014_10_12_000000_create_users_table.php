@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Http\Controllers\Auth\Storage;
 
 class CreateUsersTable extends Migration
 {
@@ -21,10 +22,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('user_name');
             $table->integer('post_id');
-            $table->string('image');
+            $table->string('profile_image');
             $table->rememberToken();
             $table->timestamps();
         });
+        
     }
 
     /**
