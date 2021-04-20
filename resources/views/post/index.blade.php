@@ -11,7 +11,7 @@
         </div>
         <div class="card-body row d-flex justify-content-between">
             <p class="col-4">{{ $post->category->name }}</p>
-            <p class="col-2">❤️</p>
+            <p class="col-2"><i class="far fa-thumbs-up"></i></p>
         </div>
         <div class="card-body row d-flex justify-content-between">
             <p col="col-8">＃タグ</p>

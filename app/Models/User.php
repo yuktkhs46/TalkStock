@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+    // いいね機能用
+    public function favorites()
+    {
+        return $this->belongsToMany(Post::class)->withTimestamps();
+    }
 }

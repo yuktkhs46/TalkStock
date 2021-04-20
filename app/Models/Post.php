@@ -23,13 +23,18 @@ class Post extends Model
     }
     
     protected static function boot()
-{
+    {
     parent::boot();
  
     // 保存時user_idをログインユーザーに設定
     self::saving(function($post) {
         $post->user_id = \Auth::id();
     });
-}
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
 
 }
