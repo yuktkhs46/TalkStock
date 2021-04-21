@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use App\Models\Post;
+use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +27,7 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::all();
-
+    
         return view('home', ['posts' => $posts]);
     }
 }

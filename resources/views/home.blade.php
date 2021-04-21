@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-
+<!--　▼ ジャンボトロン　 -->
+<div class="jumbotron">
+      <div class="container" style="color:#fff;">
+        <h1>とっておきのエピソードをみんなに</h1>
+        <p>自分が見聞きした体験・実話・友達から聞いた面白い話...</p>
+        <p>会話のネタをいつでも引き出せるようにストックしておこう！</p>
+      </div>
+    </div>
+<!--　▲ ジャンボトロン　 -->
 <div class="album py-5 ">
   <div class="container">
     <div class="row ">
@@ -49,4 +57,5 @@
     </div>    
   </div>
 </div>
+
 @endsection
