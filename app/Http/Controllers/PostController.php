@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
+use Auth;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -16,8 +17,9 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
+        $user_id = Auth::id();
         
-        return view('post.index', ['posts' => $posts]);
+        return view('post.index', ['posts' => $posts, 'user_id' => $user_id]);
     }
 
     /**
@@ -109,6 +111,8 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+        return redirect('/post');
     }
 }
