@@ -18,7 +18,7 @@ Route::get('/', 'HomeController@index')->name('home');
 // 投稿用
 Route::resource('post', PostController::class);
 // 管理者用
-Route::resource('admin', AdminController::class);
+
 // ユーザー用
 Route::resource('user', 'UserController');
 // いいね用
