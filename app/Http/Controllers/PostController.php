@@ -29,6 +29,7 @@ class PostController extends Controller
      */
     public function create()
     {
+        
         $categories = Category::all();
         return view('post.create', ['categories' => $categories]);
     }
@@ -41,6 +42,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, Post::$rules);
         // dd($request);
         $post = new Post;
         $form = $request->all();
@@ -90,6 +92,7 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, Post::$rules);
         // dd($request);
         $post = Post::find($request->id);
         $post_form = $request->all();

@@ -116,6 +116,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title' => 'タイトル',
+        'time' => 'いつ',
+        'place' => '場所',
+        'content' => '内容',
+        'punchline' => 'オチ'
+    ],
 
 ];

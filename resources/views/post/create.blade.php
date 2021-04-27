@@ -5,7 +5,8 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2 class="text-left">新規投稿</h2>
-                
+                    
+                    <form method="POST" action="{{ route('post.store')}}" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)
@@ -13,8 +14,6 @@
                             @endforeach
                         </ul>
                     @endif
-                    
-                    <form method="POST" action="{{ route('post.store')}}" enctype="multipart/form-data">
                         <div class="form-group">
                             <label class="control-label">タイトル</label>
                             <input class="form-control" type="text" name="title">
