@@ -10,6 +10,7 @@
       </div>
     </div>
 <!--　▲ ジャンボトロン　 -->
+@if(!is_null($posts))
 <div class="album py-5 ">
   <div class="container">
     <div class="row ">
@@ -57,5 +58,6 @@
     </div>    
   </div>
 </div>
+@endif
 
 @endsection
