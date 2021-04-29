@@ -27,9 +27,9 @@
                         <img src="" alt="" height="10px" width=10px>
                       </div>
                       <div class="d-flex">
-                        <img src="{{ $post->user->profile_image }}" alt="" width="45px" height="45px" class="mr-2">
+                        <img src="{{ optional($post->user)->profile_image }}" alt="" width="45px" height="45px" class="mr-2">
                         <div class="d-flex flex-column">
-                          <small class="text-muted">{{ $post->user->name }}</small>
+                          <small class="text-muted">{{ optional($post->user)->name }}</small>
                           <small class="text-muted">{{ $post->created_at}}</small>
                         </div>
                       </div>  
