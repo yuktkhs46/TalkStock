@@ -10,7 +10,7 @@ class Post extends Model
 
     public static $rules = array(
         'title' => 'required',
-        'category_id' => 'required',
+        
         'content' => 'required',
         'punchline' => 'required',
     );
