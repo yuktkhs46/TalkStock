@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Post;
 use App\Models\Category;
+use App\Models\Post;
 use App\Models\User;
 use Auth;
 use Illuminate\Http\Request;
