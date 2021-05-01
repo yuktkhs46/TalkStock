@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'user_name' => $data['user_name'],
-            'profile_image' => null,
+            
         ]);
 
         $path = Storage::disk('s3')->putFile('/',$data['profile_image'],'public');
