@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
 use Auth;
-use Illuminate\Http\Request;
+
 
 
 class PostController extends Controller
@@ -30,7 +31,6 @@ class PostController extends Controller
      */
     public function create()
     {
-        
         $categories = Category::all();
         return view('post.create', ['categories' => $categories]);
     }
