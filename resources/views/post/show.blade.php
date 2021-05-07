@@ -6,7 +6,7 @@
         <div class="card-header d-flex justify-content-between">
             <h1>{{ $post->title }}</h1>
             <div class="card-header-r text-right">
-                <p class="text-muted">{{ $post->category->name }}</p>
+                <p class="text-muted">{{ optional($post->category)->name }}</p>
             </div>
         </div>
         <div class="card-body">
@@ -26,7 +26,7 @@
             <div class="d-flex">
                 <img src="{{ $post->user->profile_image }}" alt="" width="45px" height="45px" class="mr-2">
                 <div class="d-flex flex-column">
-                    <small class="text-muted">{{ $post->user->name }}</small>
+                    <small class="text-muted">{{ optional($post->user)->name }}</small>
                     <small class="text-muted">{{ $post->created_at}}</small>
                 </div>
                 
