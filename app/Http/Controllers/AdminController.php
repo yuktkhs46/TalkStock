@@ -42,7 +42,7 @@ class AdminController extends Controller
         unset($form['_token']);
         $category->fill($form)->save();
 
-        return redirect('/');
+        return redirect('/post');
     }
 
     /**
