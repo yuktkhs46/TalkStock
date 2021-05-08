@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Category;
 
 use Illuminate\Http\Request;
 
@@ -23,7 +24,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return  view('admin.create');
     }
 
     /**
@@ -34,7 +35,14 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $category = new Category;
+        $form = $request->all();
+
+        unset($form['_token']);
+        $category->fill($form)->save();
+
+        return redirect('/admin');
     }
 
     /**

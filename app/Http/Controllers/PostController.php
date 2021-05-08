@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Auth;
 
 
-
 class PostController extends Controller
 {
     /**
@@ -32,6 +31,7 @@ class PostController extends Controller
      */
     public function create()
     {
+    
         $categories = Category::all();
         return view('post.create', ['categories' => $categories]);
     }
