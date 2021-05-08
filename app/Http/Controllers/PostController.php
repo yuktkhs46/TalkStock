@@ -32,7 +32,7 @@ class PostController extends Controller
     public function create()
     {
         
-        return view('post.create', ['categories' => $categories]);
+        return view('post.create');
     }
 
     /**
