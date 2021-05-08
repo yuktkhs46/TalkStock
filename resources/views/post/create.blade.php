@@ -19,7 +19,16 @@
                             <label class="control-label">タイトル</label>
                             <input class="form-control" type="text" name="title">
                         </div>
-                        
+                        <div class="form-group">
+                            <label class="control-label">カテゴリー</label>
+                            <select class="form-control" name="category_id">
+                            
+                                @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ optional($category)->name }}</option>
+                                @endforeach
+                           
+                            </select>
+                        </div>
                         <div class="form-group">
                             <label class="control-label">それはいつの話？</label>
                             <input class="form-control" type="text" name="time">
