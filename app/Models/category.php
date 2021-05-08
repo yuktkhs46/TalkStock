@@ -9,11 +9,11 @@ class Category extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-        'title' => 'required',
+        'name' => 'required',
     );
     
     public function posts(){
-        return $this->hasMany(Post::class);
+        return $this->hasMany(`App\Models\Category`);
     }
 
 }
