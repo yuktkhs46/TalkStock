@@ -11,4 +11,9 @@ class Category extends Model
     public static $rules = array(
         'title' => 'required',
     );
+    
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+
 }
