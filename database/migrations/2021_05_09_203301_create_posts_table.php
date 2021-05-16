@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -18,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->id('id');
             $table->integer('post_status')->default('2');
             $table->string('title');
-            $table->integer('category_id')->nullable();
+            $table->integer('category_id');
             $table->string('time')->nullable();
             $table->string('place')->nullable();
             $table->string('content')->nullable();

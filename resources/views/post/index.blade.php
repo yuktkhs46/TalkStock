@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="album py-5 ">
   <div class="container">
   @foreach($posts as $post) 
-  @if(Auth::user()->id == $post->user_id)
+  @if(Auth::user()->id === $post->user_id)
     <div class="card" style="">
         <div class="card-header d-flex justify-content-between">
             <h3>{{ $post->title }}</h3>
