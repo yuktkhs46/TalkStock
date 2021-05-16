@@ -14,7 +14,7 @@ class CreatePostUsersTable extends Migration
 
     public function up()
     {
-        Schema::create('post_user', function (Blueprint $table) {
+        Schema::create('post_users', function (Blueprint $table) {
             $table->id('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('post_id');
@@ -34,7 +34,7 @@ class CreatePostUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_user');
+        Schema::dropIfExists('post_users');
     }
 
 }
