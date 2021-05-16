@@ -15,6 +15,7 @@ class Post extends Model
         'punchline' => 'required',
     );
 
+    // カテゴリーリレーション
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -35,6 +36,7 @@ class Post extends Model
     });
     }
 
+    // いいね用
     public function users()
     {
         return $this->belongsToMany(User::class)->withTimestamps();
