@@ -77,7 +77,7 @@ class RegisterController extends Controller
         $path = Storage::disk('s3')->putFile('/',$data['profile_image'],'public');
         $user->profile_image = Storage::disk('s3')->url($path);
         $user->save();
-        // dd($user);
+        
         return $user;
     }
 }

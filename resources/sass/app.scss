@@ -56,6 +56,7 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
 }
 
 article,
@@ -76,11 +77,12 @@ body {
     font-family: "Nunito", sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
-    line-height: auto;
+    line-height: 1.6;
     color: #fbfcfc;
     text-align: left;
     background: url('/images/black.jpeg') center no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
