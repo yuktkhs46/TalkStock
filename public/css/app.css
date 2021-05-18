@@ -10997,6 +10997,11 @@ body {
   outline: 0 !important;
 }
 
+main {
+  background: url("/images/black.jpeg") center no-repeat;
+  background-size: cover;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;

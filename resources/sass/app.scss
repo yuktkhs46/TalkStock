@@ -72,6 +72,7 @@ section {
     display: block;
 }
 
+
 body {
     margin: 0;
     font-family: "Nunito", sans-serif;
@@ -87,6 +88,10 @@ body {
 
 [tabindex="-1"]:focus:not(:focus-visible) {
     outline: 0 !important;
+}
+main {
+    background: url('/images/black.jpeg') center no-repeat;
+    background-size: cover;
 }
 
 hr {
