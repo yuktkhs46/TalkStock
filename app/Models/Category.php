@@ -8,7 +8,7 @@ class Category extends Model
 {
     protected $guarded = array('id');
     
-    // 投稿への紐付け
+    // 投稿への紐づけ
     public function posts(){
         return $this->hasMany(Category::class);
 
