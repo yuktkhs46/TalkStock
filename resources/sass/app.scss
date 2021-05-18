@@ -79,7 +79,7 @@ body {
     line-height: 1.6;
     color: #fbfcfc;
     text-align: left;
-    background-image: image-url('/storage/images/black.jpeg') center no-repeat;
+    background-image: image-url('../storage/images/black.jpeg') center no-repeat;
     background-size: cover;
 }
 
@@ -5295,7 +5295,7 @@ a.badge-dark.focus {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: 0.3rem;
-    background-image: image-url('/storage/images/microphone.jpeg') center no-repeat;
+    background-image: image-url('public/storage/images/microphone.jpeg') center no-repeat;
     background-size: cover;
     z-index: 10;
     opacity: 0.8;
