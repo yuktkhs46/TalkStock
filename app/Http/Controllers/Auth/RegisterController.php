@@ -54,6 +54,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+         
         ]);
     }
 
@@ -71,13 +72,20 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'user_name' => $data['user_name'],
+            'profile_image' => '/images/noimage.png',
             
         ]);
 
-        $path = Storage::disk('s3')->putFile('/',$data['profile_image'],'public');
-        $user->profile_image = Storage::disk('s3')->url($path);
-        $user->save();
+        if (isset($data['profile_image'])) {
+            $path = Storage::disk('s3')->putFile('/',$data['profile_image'],'public');
+            $user->profile_image = Storage::disk('s3')->url($path);
+            $user->save();
+            
+            return $user;
+        }else {
+            $user->save();
+            return $user;
+        }
         
-        return $user;
     }
 }

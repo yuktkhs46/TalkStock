@@ -66,6 +66,11 @@
 
                             <div class="col-md-6">
                                 <input id="text" type="user_name" class="form-control" name="user_name" value="">
+                                @error('user_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
 
@@ -74,6 +79,11 @@
 
                             <div class="col-md-6">
                                 <input type="file" class="form-control-file" name="profile_image">
+                                @error('profile_image')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
 

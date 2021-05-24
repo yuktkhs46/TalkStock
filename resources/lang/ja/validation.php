@@ -87,6 +87,8 @@ return [
     'unique'               => 'その:attributeはすでに使われています。',
     'uploaded'             => ':attributeのアップロードに失敗しました。',
     'url'                  => ':attributeには正しい形式のURLを指定してください。',
+    'user_name'            => ':attributeを設定してください。',
+    'profile_image'        => ':attributeを設定してください。',
 
     /*
     |--------------------------------------------------------------------------
@@ -121,7 +123,9 @@ return [
         'time' => 'いつ',
         'place' => '場所',
         'content' => '内容',
-        'punchline' => 'オチ'
+        'punchline' => 'オチ',
+        'profile_image' => 'プロフィール画像',
+        'user_name' => 'ユーザーネーム',
     ],
 
 ];
